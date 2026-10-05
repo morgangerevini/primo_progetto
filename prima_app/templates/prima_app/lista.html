@@ -1,15 +1,18 @@
 <!DOCTYPE html>
+{% extends "base.html"%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista</title>
+    {%block title%}  | lista {%endblock title%}
 </head>
 <body>
+    {%block content%}
     <ol>
         <li>Primo</li>
         <li>Secondo</li>
         <li>Terzo</li>
     </ol>
+    {%endblock content%}
 </body>
 </html> 
