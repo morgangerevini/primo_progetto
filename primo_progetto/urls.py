@@ -1,10 +1,8 @@
-
-
 """
 URL configuration for primo_progetto project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
+    https://docs.djangoproject.com/en/6.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -18,13 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from primo_progetto.views import index
-from seconda_app.views import *
-
+from primo_progetto.views import index_root
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", index),
-    path('prima_app/', include("prima_app.urls", namespace = "prima_app")),
-    path('seconda_app', include("seconda_app.urls", namespace = "seconda_app")),
+    path("", index_root, name="index_root"),
+    path("prima_app/", include("prima_app.urls", namespace="prima_app")),
+    path("seconda_app/", include("seconda_app.urls", namespace="seconda_app"))
 ]
