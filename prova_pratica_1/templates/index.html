@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "base.html"%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%block title%}  | index {%endblock title%}
+</head>
+<body>
+    
+    {%block content%}
+    <ol>
+        <li><a href="{% url 'prova_pratica_1:index' %}">indice</a></li>
+        <li><a href="{% url 'prova_pratica_1:somma' %}">somma</a></li>
+        <li><a href="{% url 'prova_pratica_1:media' %}">media</a></li>
+        <li><a href="{% url 'prova_pratica_1:voti' %}">voti</a></li>
+    </ol>
+    {%endblock content%}
+</body>
+</html>
