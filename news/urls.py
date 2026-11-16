@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home, articoloDetailView
+from news.views import home, articoloDetailView
 
 app_name = 'news'
 
